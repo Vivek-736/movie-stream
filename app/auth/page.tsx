@@ -27,7 +27,7 @@ const AuthPage = () => {
               <span className="text-emerald-400 font-medium">Stream</span>
             </div>
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-center mt-8">
             <div className="bg-gray-700 px-16 py-16 self-center mt-10 lg:w-2/5 lg:max-w-md rounded-md w-full">
               <h2 className="text-white text-4xl mb-8 font-semibold text-center">
                 {variant === "login" ? "Sign In" : "Sign Up"}
