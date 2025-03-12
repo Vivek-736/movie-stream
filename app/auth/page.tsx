@@ -1,6 +1,6 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
-import Input from "@/components/input";
+import Input from "@/components/Input";
 import React, { useCallback, useState } from "react";
 
 const AuthPage = () => {
@@ -30,7 +30,7 @@ const AuthPage = () => {
           <div className="flex justify-center mt-8">
             <div className="bg-gray-700 px-16 py-16 self-center mt-10 lg:w-2/5 lg:max-w-md rounded-md w-full">
               <h2 className="text-white text-4xl mb-8 font-semibold text-center">
-                {variant === "login" ? "Sign In" : "Sign Up"}
+                {variant === "login" ? "LogIn" : "Sign Up"}
               </h2>
               <div className="flex flex-col gap-4">
                 {variant === "signup" && (
@@ -71,7 +71,7 @@ const AuthPage = () => {
                   onClick={toggleVariant}
                   className="text-blue-400 mt-1 font-semibold hover:underline cursor-pointer"
                 >
-                  {variant === "login" ? "Sign Up" : "Log In"}
+                  {variant === "login" ? "Sign Up" : "LogIn"}
                 </span>
               </p>
             </div>
