@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      aspectRatio: {
+        video: '16/9',
+      }
     },
   },
   plugins: [],

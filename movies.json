@@ -1,0 +1,34 @@
+[
+    {
+      "title": "The Avengers (2012)",
+      "description": "Nick Fury assembles Earth's mightiest heroes—Iron Man, Captain America, Hulk, Thor, Black Widow, and Hawkeye—to stop Loki and his alien army from enslaving humanity.",
+      "videoUrl": "https://www.youtube.com/watch?v=eOrNdBpGMv8",
+      "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+      "genre": "Action/Sci-Fi",
+      "duration": "2:23"
+    },
+    {
+      "title": "Avengers: Age of Ultron (2015)",
+      "description": "The Avengers face Ultron, a sentient AI created by Tony Stark, who plans to eradicate humanity to save Earth.",
+      "videoUrl": "https://www.youtube.com/watch?v=tmeOjFno6Do",
+      "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_.jpg",
+      "genre": "Action/Sci-Fi",
+      "duration": "2:21"
+    },
+    {
+      "title": "Avengers: Infinity War (2018)",
+      "description": "The Avengers and their allies fight Thanos, who aims to collect all six Infinity Stones and wipe out half of all life in the universe.",
+      "videoUrl": "https://www.youtube.com/watch?v=6ZfuNTqbHE8",
+      "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_.jpg",
+      "genre": "Action/Sci-Fi",
+      "duration": "2:29"
+    },
+    {
+      "title": "Avengers: Endgame (2019)",
+      "description": "The surviving Avengers devise a plan to reverse Thanos' snap and restore the universe in this epic finale.",
+      "videoUrl": "https://www.youtube.com/watch?v=TcMBFSGVi1c",
+      "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg",
+      "genre": "Action/Sci-Fi",
+      "duration": "3:02"
+    }
+]
