@@ -7,10 +7,8 @@ import toast from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
 import { signIn } from "next-auth/react";
-import { useRouter } from "next/navigation";
 
 const AuthPage = () => {
-  const router = useRouter();
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
@@ -30,15 +28,13 @@ const AuthPage = () => {
       await signIn("credentials", {
         email,
         password,
-        redirect: false,
-        callbackUrl: "/",
+        callbackUrl: "/profiles",
       });
       setLoading(false);
-      router.push("/");
     } catch (error) {
       toast.error("Something went wrong" + error);
     }
-  }, [email, password, router]);
+  }, [email, password]);
 
   const register = useCallback(async () => {
     setLoading(true);
@@ -89,7 +85,7 @@ const AuthPage = () => {
                 <Input
                   label="Email"
                   id="email"
-                  type="email"
+                  type="text"
                   value={email}
                   onChange={(e: {
                     target: { value: React.SetStateAction<string> };
@@ -114,13 +110,13 @@ const AuthPage = () => {
               </button>
               <div className="flex flex-row items-center gap-4 mt-8 justify-center">
                 <div
-                  onClick={() => signIn("google", { callbackUrl: "/" })}
+                  onClick={() => signIn("google", { callbackUrl: "/profiles" })}
                   className="w-36 h-10 bg-white rounded-full flex items-center justify-center hover:opacity-80 cursor-pointer transition"
                 >
                   <FcGoogle size={30} />
                 </div>
                 <div
-                  onClick={() => signIn("github", { callbackUrl: "/" })}
+                  onClick={() => signIn("github", { callbackUrl: "/profiles" })}
                   className="flex h-10 items-center justify-center w-36 bg-white rounded-full hover:opacity-80 cursor-pointer transition"
                 >
                   <BsGithub size={30} />

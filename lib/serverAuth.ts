@@ -1,26 +1,25 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { NextRequest } from "next/server";
-import { getSession } from "next-auth/react";
+import { NextRequest, NextResponse } from "next/server";
+import { getToken } from "next-auth/jwt";
 import prisma from "@/lib/prismadb";
 
 const serverAuth = async (req: NextRequest) => {
-    const session = await getSession({ req: { headers: req.headers as any } });
-    
-    if(!session?.user?.email) {
-        throw new Error("Not signed in");
+    const token = await getToken({ req });
+
+    if (!token?.email) {
+        throw new NextResponse("Unauthorized", { status: 401 });
     }
 
     const currentUser = await prisma.user.findUnique({
         where: {
-            email: session.user.email
+            email: token.email
         }
     });
 
-    if(!currentUser) {
-        throw new Error("Not signed in");
+    if (!currentUser) {
+        throw new NextResponse("Unauthorized", { status: 401 });
     }
 
-    return { currentUser };
+    return currentUser;
 }
 
 export default serverAuth;
