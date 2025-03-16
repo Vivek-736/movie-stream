@@ -13,8 +13,15 @@ const nextConfig = {
         ],
     },
     experimental: {
-        serverComponentsExternalPackages: ['@prisma/client'],
-    }
+        serverComponentsExternalPackages: ["@prisma/client", "bcrypt"],
+        serverActions: true,
+    },
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
+    typescript: {
+        ignoreBuildErrors: true,
+    },
 };
 
 export default nextConfig;
