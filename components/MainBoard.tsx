@@ -11,12 +11,13 @@ interface MainBoardProps {
 
 const MainBoard: React.FC<MainBoardProps> = ({ movie }) => {
   const videoId = movie.videoUrl.split('v=')[1]?.split('&')[0];
-  const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${videoId}`;
+
+  const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${videoId}&modestbranding=1&disablekb=1&fs=0&iv_load_policy=3&rel=0&showinfo=0`;
 
   return (
-    <div className="relative h-[56.25vw] w-full">
+    <div className="relative md:h-[56.25vw] h-96 w-full">
       <iframe
-        className="w-full h-full object-cover brightness-[60%]"
+        className="w-full h-full object-cover brightness-[60%] pointer-events-none"
         src={embedUrl}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen

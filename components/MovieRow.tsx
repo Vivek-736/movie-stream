@@ -57,7 +57,7 @@ const MovieRow: React.FC<MovieRowProps> = ({ title, movies }) => {
             <img
               src={movie.thumbnailUrl}
               alt={movie.title}
-              className="w-full h-full object-cover rounded-md group-hover:opacity-75 transition-opacity"
+              className="w-full h-fit object-cover rounded-md group-hover:opacity-75 transition-opacity"
             />
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
               <h3 className="text-white text-sm md:text-base font-semibold">

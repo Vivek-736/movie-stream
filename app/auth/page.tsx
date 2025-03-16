@@ -67,7 +67,7 @@ const AuthPage = () => {
             </div>
           </div>
           <div className="flex justify-center mt-8">
-            <div className="backdrop-blur-3xl border-2 border-green-300 rounded-4xl px-8 py-8 self-center mt-10 lg:w-1/3 lg:max-w-sm w-full">
+            <div className="backdrop-blur-3xl border-2 border-green-300 rounded-3xl px-8 py-8 self-center mt-10 lg:w-1/3 lg:max-w-sm w-full">
               <h2 className="text-white text-4xl mb-8 font-semibold text-center">
                 {variant === "login" ? "LogIn" : "Sign Up"}
               </h2>
