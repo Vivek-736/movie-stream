@@ -2,8 +2,7 @@
 import React, { useCallback, useEffect } from "react";
 import Image from "next/image";
 import NavbarItem from "./NavbarItem";
-import { BsBell, BsChevronDown, BsSearch } from "react-icons/bs";
-import MobileMenu from "./MobileMenu";
+import { BsBell, BsSearch } from "react-icons/bs";
 import { useState } from "react";
 import AccountMenu from "./AccountMenu";
 import useCurrentUser from "@/hooks/useCurrentUser";
@@ -12,7 +11,6 @@ const TOP_OFFSET = 66;
 
 const Navbar = () => {
   const {data: user} = useCurrentUser();
-  const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showAccountMenu, setShowAccountMenu] = useState(false);
   const [showBackground, setShowBackground] = useState(false);
 
@@ -30,10 +28,6 @@ const Navbar = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     }
-  }, []);
-  
-  const toggleMobileMenu = useCallback(() => {
-    setShowMobileMenu((current) => !current);
   }, []);
 
   const toggleAccountMenu = useCallback(() => {
@@ -62,13 +56,6 @@ const Navbar = () => {
             <NavbarItem label="Films" />
             <NavbarItem label="New & Popular" />
             <NavbarItem label="My List" />
-        </div>
-        <div onClick={toggleMobileMenu} className="lg:hidden flex flex-row items-center gap-2 ml-8 cursor-pointer relative">
-            <p className="text-white text-sm">
-                Browse
-            </p>
-            <BsChevronDown className={`text-white transition mt-1 ${showMobileMenu ? 'rotate-180' : 'rotate-0'}`} />
-            <MobileMenu visible={showMobileMenu} />
         </div>
         <div className="lg:flex hidden flex-row items-center ml-auto gap-7">
           <div className="text-gray-200 hover:text-gray-300 cursor-pointer transition">

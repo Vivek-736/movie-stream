@@ -18,7 +18,7 @@ const Profile = () => {
   
           <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
   
-          <div className="flex mb-4 gap-0.5 items-center text-6xl">
+          <div className="flex mb-4 gap-0.5 items-center md:text-6xl text-2xl">
               <span className="text-white">Movie</span>
               <span className="text-emerald-400 font-medium">Stream</span>
           </div>
