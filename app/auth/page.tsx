@@ -1,6 +1,6 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
-import Input from "@/components/Input";
+import Input from "@/components/Inputs/Input";
 import axios from "axios";
 import React, { useCallback, useState } from "react";
 import toast from "react-hot-toast";
