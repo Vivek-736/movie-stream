@@ -55,7 +55,7 @@ const AuthPage = () => {
     <div className='relative h-full w-full bg-[url("/images/hero.jpeg")] bg-fixed bg-no-repeat bg-cover bg-center'>
       <div className="w-full h-full">
         <nav className="px-12 py-5">
-          <div className="w-full flex gap-2 border rounded-full border-cyan-400 backdrop-blur-3xl bg-white/15">
+          <div className="w-full flex gap-2 border-2 rounded-full border-cyan-400 backdrop-blur-3xl bg-white/15">
             <img
               src="/images/logo.png"
               alt="logo"
