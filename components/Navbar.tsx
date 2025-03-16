@@ -65,7 +65,7 @@ const Navbar = () => {
             <BsBell />
           </div>
         </div>
-        <div className="flex flex-row items-center ml-6 gap-2 cursor-pointer relative">
+        <div className="flex flex-row items-center ml-10 gap-2 cursor-pointer relative">
           <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-md overflow-hidden">
             <Image onClick={toggleAccountMenu} src={user?.image || "/images/user.png"} alt="User Icon" width={40} height={40} />
             <AccountMenu visible={showAccountMenu} />
